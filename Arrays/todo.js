@@ -47,4 +47,18 @@ const getThingsTodo = (todos) => {
    })
    return remainingTodos;
 }
-console.log(getThingsTodo(todos));
+
+// Sort todos by completed
+const sortTodos = (todos) => {
+   todos.sort((a, b) => {
+      if (!a.completed && b.completed) {
+         return -1;
+      } else if (!b.completed && a.completed) {
+         return 1;
+      } else {
+         return 0;
+      }
+   })
+}
+sortTodos(todos);
+console.log(todos)
