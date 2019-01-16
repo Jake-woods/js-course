@@ -3,7 +3,7 @@ const notes = [{
       body: 'I would like to eat'
    },
    {
-      title: 'Habits to work',
+      title: 'ZHabits to work',
       body: 'blah blah'
    },
    {
@@ -11,6 +11,18 @@ const notes = [{
       body: 'Something'
    }
 ];
+
+const sortNotes = (notes) => {
+   notes.sort((a, b) => {
+      if (a.title.toLowerCase() < b.title.toLowerCase()) {
+         return -1;
+      } else if (b.title.toLowerCase() < a.title.toLowerCase()) {
+         return 1;
+      } else {
+         return 0;
+      }
+   });
+}
 
 const findNote = (notes, noteTitle) => {
    return notes.find((note) => {
@@ -31,4 +43,5 @@ const findNotes = (notes, query) => {
    return filteredNotes;
 
 }
-console.log(findNotes(notes, 'something'));
+sortNotes(notes);
+console.log(notes);
