@@ -1,3 +1,4 @@
+// Challenge area
 const account = {
    name: 'Jake',
    expenses: [],
