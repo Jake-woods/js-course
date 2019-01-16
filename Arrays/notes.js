@@ -1,7 +1,20 @@
-const notes = ['Note 1', 'Note 2', 'Note 3'];
+const notes = [{
+      title: 'Note 1',
+      body: 'I would like to eat'
+   },
+   {
+      title: 'Habits to work',
+      body: 'blah blah'
+   },
+   {
+      title: 'Blah blah bloo',
+      body: 'Something'
+   }
+];
 
-notes.forEach((note, index) => console.log(note));
+// Looks for first match
+const index = notes.findIndex(function (note, index) {
+   return note.body === 'I would like to eat';
+});
 
-for (let i = 1; i < 25; i++) {
-   console.log(`Counting... ${i}`);
-}
+console.log(index);
