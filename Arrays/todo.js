@@ -24,6 +24,8 @@ const todos = [{
 // Find index using findIndex (returns the index of item if found)
 // then using that value to remove the item
 const removeTodo = (todos, todoText) => {
+   // Use find index which returns the index if found
+   // -1 otherwise
    const index = todos.findIndex((todo) => {
       return todo.text.toLowerCase() === todoText.toLowerCase();
    })
