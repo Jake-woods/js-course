@@ -12,19 +12,23 @@ const notes = [{
    }
 ];
 
-// const findNote = (notes, noteTitle) => {
-//    const index = notes.findIndex((note) => {
-//       return note.title.toUpperCase() === noteTitle.toUpperCase();
-//    });
-//    return notes[index];
-// }
-
 const findNote = (notes, noteTitle) => {
    return notes.find((note) => {
       return note.title.toUpperCase() === noteTitle.toUpperCase();
    });
-
 }
 
-const note = findNote(notes, 'Blah blah bloo');
-console.log(note)
+// Filter
+// test note title and body against input
+// if found it's added to new array and
+// new array returned
+const findNotes = (notes, query) => {
+   const filteredNotes = notes.filter((note) => {
+      const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase());
+      const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCase());
+      return isTitleMatch || isBodyMatch;
+   });
+   return filteredNotes;
+
+}
+console.log(findNotes(notes, 'something'));

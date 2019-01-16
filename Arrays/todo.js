@@ -20,6 +20,7 @@ const todos = [{
       completed: true
    },
 ];
+
 // Function to
 // Find index using findIndex (returns the index of item if found)
 // then using that value to remove the item
@@ -36,5 +37,14 @@ const removeTodo = (todos, todoText) => {
    }
 }
 
-removeTodo(todos, 'Todo 3');
-console.log(todos);
+// Get things to do
+// Based of if they are completed or not
+// checks all todos.completed value
+// if not completed returns array with all those todos
+const getThingsTodo = (todos) => {
+   const remainingTodos = todos.filter((todo) => {
+      return !todo.completed;
+   })
+   return remainingTodos;
+}
+console.log(getThingsTodo(todos));
