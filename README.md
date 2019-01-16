@@ -13,4 +13,4 @@ Sharpening my Javscript skills following a Udemy course. Repository to store all
 |  App themes |
 | Babel and webpack  |
 
-[Andrew Mead](https://www.udemy.com/modern-javascript/)
+Course by: [Andrew Mead](https://www.udemy.com/modern-javascript/)
