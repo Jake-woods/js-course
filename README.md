@@ -1,4 +1,4 @@
-## Javascript course
+## The Modern Javascript Bootcamp course
 Sharpening my Javscript skills following a Udemy course. Repository to store all of the challenges set out in the videos.
 
 ## The course covers these subjects:
