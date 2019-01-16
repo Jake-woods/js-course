@@ -12,9 +12,19 @@ const notes = [{
    }
 ];
 
-// Looks for first match
-const index = notes.findIndex(function (note, index) {
-   return note.body === 'I would like to eat';
-});
+// const findNote = (notes, noteTitle) => {
+//    const index = notes.findIndex((note) => {
+//       return note.title.toUpperCase() === noteTitle.toUpperCase();
+//    });
+//    return notes[index];
+// }
 
-console.log(index);
+const findNote = (notes, noteTitle) => {
+   return notes.find((note) => {
+      return note.title.toUpperCase() === noteTitle.toUpperCase();
+   });
+
+}
+
+const note = findNote(notes, 'Blah blah bloo');
+console.log(note)
